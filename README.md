@@ -1,0 +1,4 @@
+# property lolscriptors
+
+## license
+MIT
