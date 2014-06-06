@@ -33,4 +33,17 @@ describe('patch', function () {
     expect(object.y).toBe(5);
   });
 
+  it('should preserve the behavior of Object.defineProperties', function () {
+    Object.defineProperties(object, {'y': { value: 5, writable: false }});
+    expect(object.y).toBe(5);
+
+    expect(function () {
+      Object.defineProperties(object, {'y': { value: 10 }});
+    }).toThrow();
+    expect(object.y).toBe(5);
+
+    object.y = 10;
+    expect(object.y).toBe(5);
+  });
+
 });
