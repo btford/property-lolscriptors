@@ -10,6 +10,14 @@ module.exports = function patch () {
     return rewriteDescriptor(obj, prop, desc);
   };
 
+  // delegate to defineProperty
+  Object.defineProperties = function (obj, props) {
+    Object.keys(props).forEach(function (prop) {
+      Object.defineProperty(obj, prop, props[prop]);
+    });
+    return obj;
+  };
+
   Object.getOwnPropertyDescriptor = function (obj, prop) {
     var desc = _getOwnPropertyDescriptor(obj, prop);
     if (isUnconfigurable(obj, prop)) {
