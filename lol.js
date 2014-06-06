@@ -1,5 +1,6 @@
 // i regret nothing
-module.exports = function patch () {
+module.exports = function patch (Object) {
+  Object = Object || typeof window === 'undefined' ? global.Object : window.Object;
   var _defineProperty = Object.defineProperty;
   var _getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
   var _create = Object.create;
