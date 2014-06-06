@@ -1,4 +1,4 @@
-# property lolscriptors
+# property lolscriptors [![Build Status](https://travis-ci.org/btford/property-lolscriptors.svg)](https://travis-ci.org/btford/property-lolscriptors)
 
 patches property descriptor functions so you can configure "non-configurable" properties of objects
 
