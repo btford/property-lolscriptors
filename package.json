@@ -4,7 +4,7 @@
   "description": "patches property descriptor functions so you can configure \"non-configurable\" properties of objects",
   "main": "lol.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine-node test/**/*.spec.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/btford/property-lolscriptors/issues"
   },
-  "homepage": "https://github.com/btford/property-lolscriptors"
+  "homepage": "https://github.com/btford/property-lolscriptors",
+  "dependencies": {
+    "jasmine-node": "^1.14.3"
+  }
 }
