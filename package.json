@@ -1,6 +1,6 @@
 {
   "name": "property-lolscriptors",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "patches property descriptor functions so you can configure \"non-configurable\" properties of objects",
   "main": "lol.js",
   "scripts": {
