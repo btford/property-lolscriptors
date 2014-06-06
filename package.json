@@ -1,0 +1,26 @@
+{
+  "name": "property-lolscriptors",
+  "version": "0.0.0",
+  "description": "patches property descriptor functions so you can configure \"non-configurable\" properties of objects",
+  "main": "lol.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/btford/property-lolscriptors.git"
+  },
+  "keywords": [
+    "object",
+    "util",
+    "patch",
+    "property",
+    "descriptor"
+  ],
+  "author": "Brian Ford <btford@umich.edu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/btford/property-lolscriptors/issues"
+  },
+  "homepage": "https://github.com/btford/property-lolscriptors"
+}
