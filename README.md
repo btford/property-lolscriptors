@@ -26,7 +26,7 @@ Object.defineProperty(x, 'y', {
 
 // throws TypeError:
 Object.defineProperty(x, 'y', {
-  value: 5
+  value: 10
 });
 
 // x.y => 5
