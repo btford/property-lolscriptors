@@ -40,19 +40,19 @@ module.exports = function patch () {
     desc = rewriteDescriptor(obj, prop, desc);
     return _defineProperty(obj, prop, desc);
   };
+
+  function rewriteDescriptor (obj, prop, desc) {
+    if (!desc.configurable) {
+      desc.configurable = true;
+      if (!obj.__unconfigurables) {
+        _defineProperty(obj, '__unconfigurables', { writable: true, value: {} });
+      }
+      obj.__unconfigurables[prop] = true;
+    }
+    return desc;
+  }
 };
 
 function isUnconfigurable (obj, prop) {
   return obj && obj.__unconfigurables && obj.__unconfigurables[prop];
-}
-
-function rewriteDescriptor (obj, prop, desc) {
-  desc.configurable = true;
-  if (!desc.configurable) {
-    if (!obj.__unconfigurables) {
-      _defineProperty(obj, '__unconfigurables', { writable: true, value: {} });
-    }
-    obj.__unconfigurables[prop] = true;
-  }
-  return desc;
 }
