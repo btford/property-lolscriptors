@@ -39,6 +39,16 @@ redefine(x, 'y', {
 // x.y => 10
 ```
 
+By default, property lolscriptors will patch `window.Object` or `global.Object` (whichever exists).
+Optionally, you can pass the pass function an instance of `Object` to patch:
+
+```javascript
+var patchPropertyDescriptors = require('property-lolscriptors');
+var redefine = patchPropertyDescriptors(Object);
+
+// ...
+```
+
 
 ## license
 MIT
